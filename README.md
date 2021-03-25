@@ -1,1 +1,5 @@
-[![Gitlab forks](https://ae01.alicdn.com/kf/H3d1f70fa65c7433f9f96ea56fa3bed1eB.jpg)](https://gitlab.com/KirpaDmitriy/irrelevant)
+Horsesharing
+=======
+[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://gitlab.com/KirpaDmitriy/irrelevant)
+Служба совместного употребления лошадей для скорой доставки ноши, грамот, особ любого сословия до любой волости Руси.
+Машина измышляет кратчайший шлях чрез пересадочные стоянки, в коих будет производиться замена трансортного средства для продолжения пути (один даже самый резвый конь может не суметь пройти необъятную Русь целиком). Наша электронная служба дозволяет забронировать резвейших и ближайших коней, могущих знадобиться на маршруте.
