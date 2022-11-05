@@ -19,6 +19,6 @@ module.exports = {
       }),
     ],
   },
-  publicPath: '/',
+  publicPath: "/",
   runtimeCompiler: true,
 };
