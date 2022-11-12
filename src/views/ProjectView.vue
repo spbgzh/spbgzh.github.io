@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import Markdown from "vue3-markdown-it";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const getReadme = (url: string) => {
   return axios.create()({
@@ -31,6 +31,16 @@ const data = reactive({
   url: "",
 });
 
+function base64ToUTF8(str: AxiosResponse) {
+  return decodeURIComponent(
+    Array.prototype.map
+      .call(atob(str.data.content), function (c) {
+        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join("")
+  );
+}
+
 export default defineComponent({
   components: {
     Markdown,
@@ -43,13 +53,7 @@ export default defineComponent({
         getReadme(
           "https://api.github.com/repos/" + repository + "/readme"
         ).then((res) => {
-          data.content = decodeURIComponent(
-            Array.prototype.map
-              .call(atob(res.data.content), function (c) {
-                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-              })
-              .join("")
-          );
+          data.content = base64ToUTF8(res);
           data.url = "https://github.com/" + repository;
         });
       } catch (e) {
