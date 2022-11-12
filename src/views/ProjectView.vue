@@ -52,7 +52,7 @@ export default defineComponent({
       try {
         getReadme(
           "https://api.github.com/repos/" + repository + "/readme"
-        ).then((res: AxiosResponse) => {
+        ).then((res) => {
           data.content = base64ToJSON(res);
           data.url = "https://github.com/" + repository;
         });
