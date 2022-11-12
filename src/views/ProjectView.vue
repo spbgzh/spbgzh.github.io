@@ -31,10 +31,10 @@ const data = reactive({
   url: "",
 });
 
-function base64ToUTF8(str: AxiosResponse) {
+function base64ToJSON(res: AxiosResponse) {
   return decodeURIComponent(
     Array.prototype.map
-      .call(atob(str.data.content), function (c) {
+      .call(atob(res.data.content), function (c) {
         return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
       })
       .join("")
@@ -52,8 +52,8 @@ export default defineComponent({
       try {
         getReadme(
           "https://api.github.com/repos/" + repository + "/readme"
-        ).then((res) => {
-          data.content = base64ToUTF8(res);
+        ).then((res: AxiosResponse) => {
+          data.content = base64ToJSON(res);
           data.url = "https://github.com/" + repository;
         });
       } catch (e) {
