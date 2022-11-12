@@ -91,6 +91,30 @@
             </n-gradient-text>
           </n-card>
         </n-tab-pane>
+        <n-tab-pane name="Demo Video" tab="Demo Video">
+          <div style="padding: 20px">
+            <h1>Chatex</h1>
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              width="720"
+              height="405"
+              src="https://www.youtube.com/embed/hZM5a-dDttg?color=white"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <h1>AI-GoBang</h1>
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              width="720"
+              height="405"
+              src="https://www.youtube.com/embed/wFO6KlJELPs?color=white"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </n-tab-pane>
       </n-tabs>
     </div>
   </div>
