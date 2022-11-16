@@ -67,10 +67,10 @@ const router = createRouter({
               component: async () => await import("../views/ProjectView.vue"),
             },
             {
-              path: "emotion-recognition",
-              name: "emotion-recognition",
+              path: "eeg-emotion-recognition",
+              name: "eeg-emotion-recognition",
               meta: {
-                repository: "DenisAndGzh/emotion-recognition",
+                repository: "DenisAndGzh/EEG-Emotion-Recognition",
               },
               component: async () => await import("../views/ProjectView.vue"),
             },

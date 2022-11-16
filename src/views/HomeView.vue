@@ -319,12 +319,12 @@ const menuOptions: MenuOption[] = [
                 RouterLink,
                 {
                   to: {
-                    name: "emotion-recognition",
+                    name: "eeg-emotion-recognition",
                   },
                 },
                 { default: () => "Emotion Recognition" }
               ),
-            key: "emotion-recognition",
+            key: "eeg-emotion-recognition",
             icon: renderIcon(HappyOutline),
           },
         ],
